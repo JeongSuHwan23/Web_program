@@ -1,0 +1,35 @@
+body{
+  margin: 0;
+}
+header{
+  background-color: blue;
+}
+header h1{
+  color : white;
+  text-align: center;
+  margin: 0;
+}
+nav{
+  background-color: lightblue;
+}
+nav a{
+  color : white;
+  padding-left: 20px;
+}
+section{
+  background-color: lightgray;
+  padding-bottom: 30px;
+}
+section h2{
+  margin: 0;
+  padding-top: 30px;
+}
+section button{
+  margin: 0;
+}
+footer{
+  background-color : blue;
+  color : white;
+  text-align: center;
+}
+
