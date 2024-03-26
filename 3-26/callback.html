@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callback</title>
+</head>
+<body>
+  <script>
+    function showDate(name, age) {
+      alert("이름: " + name + ", 나이: " + age);
+    }
+
+    function getDate(callback) {
+      let userName = prompt("이름 : ");
+      let userAge = prompt("나이 : ");
+      callback(userName, userAge);
+    }
+
+    getDate(showDate);
+
+  </script>
+  
+</body>
+</html>
