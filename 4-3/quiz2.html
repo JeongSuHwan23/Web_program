@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>연습문제 2</title>
+    <style>
+			#container { 
+				width:520px;
+				border:1px solid black;
+				padding:20px 40px;
+				margin:0 auto;
+			}
+      fieldset { margin-bottom:15px; }
+      legend { font-weight:bold; }
+			ul {list-style-type: none;}
+			li { line-height:30px;}
+    </style>
+  </head>
+  <body>
+		<div id="container">
+			<h1>프런트엔드 개발자 지원서 </h1>
+			<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+			<hr>
+			<form>
+			  <fieldset>
+          <legend><b>개인정보</b></legend>
+          <label>이름<input type="text"></label><br>
+          <label>연락처<input type="tel"></label>
+        </fieldset><br>
+        <fieldset>
+          <legend><b>지원분야</b></legend>
+            <label><input type="radio" name="major">웹 퍼블리싱</label><br>
+            <label><input type="radio" name="major">웹 어플리케이션 개발</label><br>
+            <label><input type="radio" name="major">개발 환경 개선</label>
+        </fieldset><br>
+        <fieldset>
+          <legend><b>지원동기</b></legend>
+            <label><input type="text" aria-rowcount="5" aria-colcount="60"></label>
+        </fieldset>
+        <button>접수하기</button>
+        <button>취소</button>
+      </form>
+		</div>
+  </body>
+</html>

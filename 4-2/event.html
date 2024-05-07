@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="event.js" defer></script>
+</head>
+<body>
+  <h2>회원가입</h2>
+  <form method="POST" id="login_form">
+    <label>아이디 :<br><input id="id" type="text"></label><br>
+    <label>비밀번호 :<br><input id="password" type="password"></label><br>
+    <label>비밀번호 재확인 :<br><input id="pwdConpirm" type="password"></label><br>
+    <input id="checkPwdButton" value="비밀번호 확인" type="button"><br>
+    성별 : 
+    <label>남<input id="male" name="gender" value="male" type="radio"></label>
+    <label>여<input id="female" name="gender" value="female" type="radio"></label><br>
+    <input type="reset" value="초기화">
+    <input type="button" value="확인 후 제출" onclick="check()">
+  </form>
+</body>
+</html>
