@@ -1,0 +1,16 @@
+.bar{
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  animation-duration: 3s;
+  animation-name: longer;
+}
+
+@keyframes longer {
+  from{
+    width: 100px;
+  }
+  to{
+    width: 1000px;
+  }
+}
