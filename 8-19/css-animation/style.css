@@ -1,16 +1,19 @@
-.bar{
-  background-color: black;
+#box {
   width: 100px;
   height: 100px;
-  animation-duration: 3s;
-  animation-name: longer;
+  background-color: red;
+  position: relative;
+  animation: moveAndColor 3s infinite alternate;
 }
 
-@keyframes longer {
-  from{
-    width: 100px;
+@keyframes moveAndColor {
+  0% {
+    left: 0;
+    background-color: red;
   }
-  to{
-    width: 1000px;
+
+  100% {
+    left: 300px;
+    background-color: blue;
   }
 }

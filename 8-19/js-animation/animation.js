@@ -1,17 +1,15 @@
-const bar = document.querySelector('.bar');
-let width = 100;
-let intervalId;
-
-function render() {
-  intervalId = setInterval(animation, 1000/60);
+const box = document.getElementById('box');
+let position = 0;
+let direction = 1;
+let colorToggle = true;
+function animate() {
+  position += 2 * direction;
+  if (position >= 300 || position <= 0) {
+    direction *= -1; // 방향 전환
+    colorToggle = !colorToggle; // 색상 전환
+  }
+  box.style.left = position + 'px';
+  box.style.backgroundColor = colorToggle ? 'red' : 'blue';
+  requestAnimationFrame(animate);
 }
-
-function animation() {
-  bar.style.width = `${width}px`;
-  width += 10;
-  if (width == 1000) clearInterval(intervalId);
-}
-
-function onClick() {
-  render();
-}
+animate(); 
