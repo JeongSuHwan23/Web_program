@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Trail Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .trail {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: red;
+      position: absolute;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const numCircles = 10;
+    const delay = 15;
+    const circles = [];
+
+    for (let i = 0; i < numCircles; i++) {
+      const circle = document.createElement('div');
+      circle.className = 'trail';
+      document.body.appendChild(circle);
+      circles.push({ element: circle, x: 0, y: 0 });
+    }
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateTrail() {
+      let prevX = mouseX;
+      let prevY = mouseY;
+
+      circles.forEach((circle, index) => {
+        const { element } = circle;
+        const dx = prevX - circle.x;
+        const dy = prevY - circle.y;
+
+        circle.x += dx * 0.2;
+        circle.y += dy * 0.2;
+
+        element.style.transform = `translate(${circle.x - 5}px, ${circle.y - 5}px)`;
+
+        prevX = circle.x;
+        prevY = circle.y;
+      });
+
+      requestAnimationFrame(animateTrail);
+    }
+
+    animateTrail();
+  </script>
+</body>
+</html>
